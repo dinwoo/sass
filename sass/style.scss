@@ -1,0 +1,28 @@
+@import 'base/var';
+h1 {
+    color: #f00;
+    font-size: $num;
+}
+
+@mixin box($name) {
+    #{$name} {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+@include box('h1');
+%btn {
+    width: 100px;
+    height: 10px;
+}
+
+.btn1 {
+    @extend %btn;
+}
